@@ -3,6 +3,14 @@
 
 <beans>
 
+
 	<!-- add your bean definitions here! -->
+	<bean name="customerService"
+		class="com.virtualpairprogrammers.services.customers.CustomerManagementMock">
+	</bean>
+
+	<bean name="diaryService"
+		class="com.virtualpairprogrammers.services.diary.DiaryManagementMock">
+	</bean>
 
 </beans>
