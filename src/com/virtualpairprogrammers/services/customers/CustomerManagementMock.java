@@ -87,7 +87,7 @@ public class CustomerManagementMock implements CustomerManagementService {
 	@Override
 	public Customer getFullCustomerDetail(String customerId) throws CustomerNotFoundException {
 		Customer thisCustomer = customers.get(customerId);
-		if (thisCustomer != null)
+		if (thisCustomer == null)
 			throw new CustomerNotFoundException();
 		return thisCustomer;
 	}

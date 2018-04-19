@@ -27,11 +27,11 @@ public class DiaryManagementMock implements DiaryManagementService {
 	public List<Action> getAllIncompleteActions(String requiredUser) {
 		// TODO: There must be a more efficient way... stream?
 		List<Action> actionList = new ArrayList<>();
-		for (Action action : actionList) {
+		for (Action action : actions) {
 			if (action.getOwningUser().equals(requiredUser) && !action.isComplete())
 				actionList.add(action);
 		}
-		return null;
+		return actionList;
 	}
 
 }

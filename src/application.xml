@@ -3,7 +3,6 @@
 
 <beans>
 
-
 	<!-- add your bean definitions here! -->
 	<bean name="customerService"
 		class="com.virtualpairprogrammers.services.customers.CustomerManagementMock">
@@ -11,6 +10,11 @@
 
 	<bean name="diaryService"
 		class="com.virtualpairprogrammers.services.diary.DiaryManagementMock">
+	</bean>
+
+	<bean name="callHandingService" class="com.virtualpairprogrammers.services.calls.CallHandler">
+		<constructor-arg ref="customerService" />
+		<constructor-arg ref="diaryService" />
 	</bean>
 
 </beans>
